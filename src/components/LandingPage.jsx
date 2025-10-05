@@ -85,6 +85,7 @@ const LandingPage = () => {
             pauseDuration={1500}
             showCursor={true}
             cursorCharacter="|"
+            loop={false}
           />
           <p className="subheadline">
             Until then, join our community and help shape it.
