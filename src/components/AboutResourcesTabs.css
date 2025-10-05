@@ -1,0 +1,89 @@
+/* About/Resources Tabs styling for the new hamburger menu */
+
+.ar-navbar {
+  position: absolute; /* Changed to absolute for precise positioning */
+  top: 10px; /* Aligned to top */
+  right: 30px; /* Aligned to right, adjusted for spacing */
+  z-index: 1000; /* Ensure menu is above other content */
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-icon {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,255,255,0.2);
+  border-radius: 999px; /* Pill shape */
+  padding: 0.5rem 1rem;
+  color: #00ffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon:hover {
+  background: rgba(0,255,255,0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 14, 39, 0.95); /* Dark overlay */
+  backdrop-filter: blur(10px);
+  z-index: 100; /* Ensure it's on top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.close-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  color: #00ffff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-icon:hover {
+  color: #0099ff;
+}
+
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.mobile-nav-link {
+  color: rgba(255,255,255,0.85);
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  color: #00ffff;
+  transform: translateX(10px);
+}
+
+/* Hide hamburger on larger screens if a desktop menu is desired, or adjust its display */
+/* @media (min-width: 769px) {
+  .hamburger-icon {
+    display: none;
+  }
+} */

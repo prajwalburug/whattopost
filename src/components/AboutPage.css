@@ -1,0 +1,160 @@
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+  color: #ffffff;
+  padding: 1rem; /* Adjusted padding for mobile */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.about-content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.about-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #00ffff;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.about-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.about-list li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.about-list li::before {
+  content: '•';
+  color: #00ffff;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.about-features-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.about-features-list li {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.feature-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+.join-waitlist-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #00ffff, #0099ff);
+  color: #0a0e27;
+  border: none;
+  border-radius: 12px; /* Changed for a "little boxed" look */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+  text-decoration: none; /* Remove underline from link */
+  margin-top: 2rem;
+}
+
+.join-waitlist-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.6);
+}
+
+.join-waitlist-button:active {
+  transform: translateY(0);
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-subtitle {
+    font-size: 1.5rem;
+  }
+  .about-content-container {
+    padding: 1rem;
+    margin: 0 0.5rem; /* Add some horizontal margin for smaller screens */
+  }
+  .about-features-list {
+    grid-template-columns: 1fr;
+  }
+}

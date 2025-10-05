@@ -1,0 +1,68 @@
+.social-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: sans-serif;
+}
+
+.social-selector-dropdown {
+  position: relative;
+}
+
+.social-selector-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+}
+
+.social-selector-options {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.social-selector-dropdown:hover .social-selector-options {
+  display: flex;
+}
+
+.social-selector-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.social-selector-option:hover {
+  background-color: #f0f0f0;
+}
+
+.social-selector-option.selected {
+  font-weight: bold;
+}
+
+.social-selector-handle a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-selector-handle a:hover {
+  text-decoration: underline;
+}

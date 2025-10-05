@@ -1,0 +1,295 @@
+/* Landing Page Styles */
+/* Apple Typescale System - Major Third (1.25) */
+/* Base: 16px, h6: 20px, h5: 25px, h4: 31.25px, h3: 39.06px, h2: 48.83px, h1: 61.04px */
+
+.landing-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.light-rays-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px; /* Changed to max-width for responsiveness */
+  width: 100%; /* Ensure it takes full width on smaller screens */
+  margin: 0 auto;
+  padding: 1rem; /* Adjusted padding for mobile */
+}
+
+/* Header */
+.header {
+  padding: 1rem 0;
+  height: 100px; /* Fixed height to prevent vertical shifts */
+  flex-shrink: 0; /* Prevent shrinking */
+  display: flex; /* Added to enable flexbox properties */
+  justify-content: flex-end; /* Aligns content to the right */
+  align-items: center; /* Centers content vertically */
+}
+
+.logo {
+  display: none;
+}
+
+.nav-bar {
+  position: relative; /* Ensure stable positioning context */
+  /* width: 100%; Removed to allow content to shrink to its size */
+  display: flex;
+  justify-content: flex-end; /* Aligns content to the right */
+  align-items: center;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 4rem 0 6rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.headline {
+  font-size: 3.8147rem; /* 61.04px - h1 in typescale */
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 255, 255, 0.3);
+}
+
+.subheadline {
+  font-size: 1.5625rem; /* 25px - h5 in typescale */
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-bottom: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Email Form */
+.email-form {
+  margin-top: 3rem;
+}
+
+.form-wrapper {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.email-input {
+  flex: 1;
+  min-width: 280px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 12px; /* Changed for a "little boxed" look */
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.email-input:focus {
+  border-color: #00ffff;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.submit-button {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #00ffff, #0099ff);
+  color: #0a0e27;
+  border: none;
+  border-radius: 12px; /* Changed for a "little boxed" look */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.6);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.success-message {
+  margin-top: 1rem;
+  color: #00ffff;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Who Can Join Section */
+.who-section {
+  padding: 4rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 3.0518rem; /* 48.83px - h2 in typescale */
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.audience-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.audience-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.audience-card h4 {
+  font-size: 1.25rem; /* 20px - h6 in typescale */
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+  color: #00ffff;
+}
+
+.audience-card p {
+  font-size: 1rem; /* 16px - base size */
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 3.0518rem; /* 48.83px - h2 */
+    line-height: 1.15;
+  }
+
+  .subheadline {
+    font-size: 1.25rem; /* 20px - h6 */
+    line-height: 1.4;
+  }
+
+  .form-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .email-input {
+    min-width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .audience-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.4414rem; /* 39.06px - h3 */
+    line-height: 1.2;
+  }
+
+  /* Removed .content-container padding adjustment here as it's now handled globally */
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5625rem; /* 25px - h5 */
+  }
+
+  .headline {
+    font-size: 2.4414rem; /* 39.06px - h3 */
+    line-height: 1.2;
+  }
+
+  .subheadline {
+    font-size: 1.125rem; /* 18px - between base and h6 */
+    line-height: 1.45;
+  }
+
+  .hero-section {
+    padding: 2rem 0 4rem;
+  }
+
+  .section-title {
+    font-size: 1.9531rem; /* 31.25px - h4 */
+  }
+}
