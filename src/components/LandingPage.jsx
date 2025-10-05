@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import LightRays from './LightRays';
-import TextType from './TextType';
+import BlurText from './BlurText';
 import Carousel from './Carousel';
 import './LandingPage.css';
 import { FiCircle, FiEdit2, FiLayers, FiLayout, FiCode } from 'react-icons/fi';
@@ -78,15 +78,12 @@ const LandingPage = () => {
         {/* Hero Section */}
         <section className="hero-section">
           <div className="hero-text-container">
-            <TextType 
-              as="h1"
+            <BlurText
+              text="Stop Overthinking. Start Posting."
+              delay={150}
+              animateBy="words"
+              direction="top"
               className="headline"
-              text={["The app is coming soon.", "Stop Overthinking. Start Posting."]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor={true}
-              cursorCharacter="|"
-              loop={false}
             />
             <p className="subheadline">
               Until then, join our community and help shape it.
