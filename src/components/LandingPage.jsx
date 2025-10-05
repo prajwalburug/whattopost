@@ -77,19 +77,21 @@ const LandingPage = () => {
 
         {/* Hero Section */}
         <section className="hero-section">
-          <TextType 
-            as="h1"
-            className="headline"
-            text={["The app is coming soon.", "Stop Overthinking. Start Posting."]}
-            typingSpeed={75}
-            pauseDuration={1500}
-            showCursor={true}
-            cursorCharacter="|"
-            loop={false}
-          />
-          <p className="subheadline">
-            Until then, join our community and help shape it.
-          </p>
+          <div className="hero-text-container">
+            <TextType 
+              as="h1"
+              className="headline"
+              text={["The app is coming soon.", "Stop Overthinking. Start Posting."]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+              loop={false}
+            />
+            <p className="subheadline">
+              Until then, join our community and help shape it.
+            </p>
+          </div>
 
           {/* Email Form */}
           <form className="email-form" onSubmit={handleSubmit} aria-busy={isSubmitting}>

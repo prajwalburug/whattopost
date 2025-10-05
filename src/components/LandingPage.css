@@ -61,6 +61,13 @@
   margin: 0 auto;
 }
 
+.hero-text-container {
+  height: 250px; /* Fixed height to prevent content below from shifting */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .headline {
   font-size: 3.8147rem; /* 61.04px - h1 in typescale */
   font-weight: 700;
@@ -69,7 +76,6 @@
   margin-bottom: 1.5rem;
   color: #ffffff;
   text-shadow: 0 2px 20px rgba(0, 255, 255, 0.3);
-  min-height: calc(3.8147rem * 1.1 * 2.2); /* Reserve space for 2 lines */
 }
 
 .subheadline {
